@@ -118,6 +118,7 @@ fun Calculator(applicationContext: Context){
             }) {
                 Text(text = "Do nothing")
             }
+            //hi
         }
 
         if(bool.value){
