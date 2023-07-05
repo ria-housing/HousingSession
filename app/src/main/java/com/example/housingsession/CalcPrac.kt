@@ -112,6 +112,12 @@ fun Calculator(applicationContext: Context){
             }) {
                 Text(text = "DIV")
             }
+            Button(onClick = { /*TODO*/
+                result.value = (a.value.toDouble()/b.value.toDouble()).toString()
+                bool.value = true
+            }) {
+                Text(text = "Do nothing")
+            }
         }
 
         if(bool.value){
