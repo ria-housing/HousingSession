@@ -43,7 +43,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    startActivity(Intent(applicationContext,CalcPrac::class.java))
+                    startActivity(Intent(applicationContext,WidgetsPract::class.java))
                     MainScreen(applicationContext)
 
 //                    Greeting("Android")
