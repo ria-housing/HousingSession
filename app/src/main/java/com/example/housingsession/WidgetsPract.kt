@@ -11,6 +11,7 @@ import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
@@ -171,6 +172,8 @@ fun GreetingPreview3() {
 @Composable
 fun artt(applicationContext:Context) {
 
+
+
     var notificationManager =
         applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -188,10 +191,29 @@ fun artt(applicationContext:Context) {
         inte,
         PendingIntent.FLAG_IMMUTABLE
     )
+    var inj = Intent(applicationContext, MainActivity::class.java)
+    var pen = PendingIntent.getActivity(
+        applicationContext,
+        0,
+        inj,
+        PendingIntent.FLAG_IMMUTABLE
+    )
+
     val notificationBuilder = NotificationCompat.Builder(applicationContext, "101")
         .setContentTitle("All is Well")
         .setContentText("Everything is happening perfectly!")
         .setContentIntent(pendin)
+        .setAutoCancel(true)
+        .setStyle(NotificationCompat.BigPictureStyle()
+            .bigPicture(
+                BitmapFactory.decodeResource(applicationContext.getResources(),
+                R.drawable.church)))
+        .addAction(R.drawable.church,"hi",
+            pen)
+        .addAction(R.drawable.church,"ho",
+            pen)
+        .addAction(R.drawable.church,"ab",
+            pen)
         .setSmallIcon(R.drawable.ic_launcher_background)
 
     notificationManager.notify(1, notificationBuilder.build())
