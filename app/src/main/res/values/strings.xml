@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Housing Session</string>
+    <string name="app_name">Housing Session Days</string>
     <string name="title_activity_calc_prac">CalcPrac</string>
     <string name="title_activity_lazy_comp">LazyComp</string>
     <string name="title_activity_widgets_pract">WidgetsPract</string>
