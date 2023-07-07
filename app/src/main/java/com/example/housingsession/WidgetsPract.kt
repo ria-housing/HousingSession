@@ -30,7 +30,11 @@ class WidgetsPract : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting3("Android")
+
+                    val ddd = intent.getStringExtra("efssf")
+                    val sss = intent.getIntExtra("efssf",6)
+                    println(ddd)
+                  //  Greeting3("Android")
                 }
             }
         }
@@ -48,7 +52,9 @@ fun Greeting3(name: String, modifier: Modifier = Modifier) {
            Toast.makeText(ctx,"$dayOfMonth / ${month+1} / $year",Toast.LENGTH_LONG).show()
 
        }
+
        val dp = DatePickerDialog(ctx,lis,2023,0,1)
+
        Button(onClick = { dp.show() }) {
            Text(text = "Date picker")
        }
