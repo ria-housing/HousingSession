@@ -43,7 +43,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    startActivity(Intent(applicationContext,CalcPrac::class.java))
+                    startActivity(Intent(applicationContext,WidgetsPract::class.java))
+
+                    //intent(this,WidgetsPract::class.java)
+//                   Intent(this,WidgetsPract::class.java)
+//                     .putExtra("age",27)
+//                     .putExtra("efssf","segfes")
+//                     .putExtra("fgsrgrdrh","sgsrsgdg")
+                    //.putExtra("hi",)
+                   // startActivity(k)
+
                     MainScreen(applicationContext)
 
 //                    Greeting("Android")
